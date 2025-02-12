@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&display=swap');
+
+body {
+  background-color: pink;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor General */
+.carta {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #f8d0e7;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* --- HOJA 1 --- */
+#hoja1 {
+  background-color: #f8d0e7;
+  color: #ff66b2;
+}
+
+.texto-fuego {
+  font-family: 'Dancing Script', cursive;
+  color: #ff66b2;
+  font-size: 1em;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  animation: fuego 1.5s infinite alternate;
+}
+
+@keyframes fuego {
+  0% { text-shadow: 0 0 5px #ff66b2; }
+  100% { text-shadow: 0 0 10px #ff33a6; }
+}
+
+.boton {
+  background-color: #f9a8d4;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Dancing Script', cursive;
+  position: relative;
+}
+
+.boton::before {
+  content: '🐱';
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* --- HOJA 2 --- */
+#hoja2 {
+  background-color: pink;
+}
+
+.contenedor-gif {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contenedor-gif img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.texto-sobre-gif {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.texto-sobre-gif ul {
+  animation: desplazamiento 40s linear infinite;
+}
+
+@keyframes desplazamiento {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+.boton-centrado {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* --- HOJA 3 - BIOGRAFÍA OPTIMIZADA --- */
+#hoja3 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.titulo-bio {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8em;
+  text-align: center;
+  color: #ff66b2;
+  margin-bottom: 15px;
+}
+
+.bio-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.bio-bloque {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  justify-content: space-between;
+}
+
+.texto-bio {
+  font-family: 'Great Vibes', cursive;
+  font-size: 0.9em;
+  color: #ff66b2;
+  text-shadow: 0 0 5px #ff66b2, 0 0 10px #ff33a6;
+  width: 55%;
+  text-align: justify;
+  padding: 5px;
+}
+
+.gif-bio {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.bio-bloque:nth-child(odd) {
+  flex-direction: row;
+}
+
+.bio-bloque:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Botón al final de la biografía */
+.boton-bio {
+  background-color: pink;
+  padding: 8px 15px;
+  font-size: 1em;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Dancing Script', cursive;
+  margin-top: 15px;
+}
+
+/* --- HOJA 4 - NOTA FINAL --- */
+#hoja4 {
+  background-color: black;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.texto-nota {
+  font-family: 'Great Vibes', cursive;
+  color: white;
+  font-size: 1.5em;
+  text-shadow: 0 0 10px white, 0 0 20px white;
+}
+
+.gif-nota {
+  width: 120px;
+  margin-top: 10px;
+}
+
+.boton-nota {
+  background-color: pink;
+  padding: 10px;
+  font-size: 1.2em;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Dancing Script', cursive;
+}
+
+/* --- CUADRO FINAL --- */
+#cuadro-final {
+  display: none;
+  background-color: #F4C2C2;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cuadro-final p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5em;
+  color: #ff66b2;
+  margin-bottom: 10px;
+}
+
+#cuadro-final img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Botón para volver al inicio */
+.boton-inicio {
+  display: none;
+  background-color: #ff66b2;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Dancing Script', cursive;
+  margin-top: 10px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta de Amor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Hoja 1 -->
+  <div class="carta" id="hoja1">
+    <p class="texto-fuego">De: Jhonatan <br> Para: Saray</p>
+    <div class="gif">
+      <img src="https://media.tenor.com/Tec0PJ0IofkAAAAi/hello-kitty-love.gif" alt="Hello Kitty Love">
+    </div>
+    <p>Cuando conocemos a alguien, su nombre es solo un sonido más, algo sin importancia. Pero con el tiempo, cuando compartimos momentos, risas y silencios, ese nombre se convierte en algo especial. Se llena de significado, de cariño, de recuerdos... Y el tuyo, Saray, es mi favorito.</p>
+    <button class="boton" onclick="cambiarHoja(2)">Haz click aquí bb</button>
+  </div>
+
+  <!-- Hoja 2 -->
+  <div class="carta" id="hoja2" style="display: none;">
+    <div class="contenedor-gif">
+      <img src="https://media1.giphy.com/media/kB5EP1F1w7c1G/giphy.gif" alt="Gif Ojo">
+      <div class="texto-sobre-gif">
+        <ul>
+          <li>1- Quiero empezar esto dándote las gracias. Gracias por ser mi amiga, por ser parte de mi vida y por todo lo que has soportado de mí. No sé cómo lo haces, pero ahí sigues, con tu forma tan única de estar presente.</li>
+          <li>2- Gracias por acompañarme en momentos en los que, aunque no lo supieras, necesitaba a alguien. A veces tenía días difíciles, pero con solo hablar contigo o ver lo que hacías, sin darte cuenta, me hacías olvidar todo lo malo y sonreír</li>
+          <li>3- Gracias por dejarme conocerte, aunque sea solo un poquito. Quizás del 100% de lo que eres, apenas conozco un 5%, pero con ese pequeño porcentaje me basta para saber que eres una mujer increíble. Y con eso, créeme, me siento afortunado</li>
+          <li>4- Gracias por ser directa conmigo, por aclarar las cosas, incluso cuando nunca te propuse ser mi novia pero está en mi mente . Me das tu tiempo, me explicas las cosas sin rodeos y, sobre todo, tienes paciencia conmigo. Me has conocido en poco tiempo, pero de alguna forma, siento que sabes cosas de mí que ni yo mismo entendía. Y cuando me doy cuenta, me quedo todo pendejo</li>
+          <li>5- Gracias por no dejarme de lado. Hubo un tiempo en el que pensé que esto sería pasajero, que después de unos días me olvidarías. Pero no fue así. Me hiciste sentir parte de tu mundo, y en cada pequeño gesto me demostraste que sí importo para ti.</li>
+        </ul>
+      </div>
+    </div>
+    <button class="boton boton-centrado" id="btn-hoja2" style="display: none;" onclick="cambiarHoja(3)">Esto aún no termina Mai loved</button>
+  </div>
+
+  <!-- Hoja 3 - Biografía -->
+  <div class="carta biografia" id="hoja3" style="display: none;">
+    <h2 class="titulo-bio">para ti ¿14/02?</h2>
+    <div class="bio-contenedor">
+      <div class="bio-bloque">
+        <p class="texto-bio">Mira, así te ves cuando duermes. JSJSJAJA
+Sé que muchas veces sacrificas tus horas de sueño por quedarte conmigo, y aunque me encanta hablar contigo hasta tarde, quiero que sepas que lo valoro muchísimo. Eres muy importante para mí, y lo último que quiero es verte cansada o de mal humor por mi culpa. Así que prométeme que dormirás bien, ¿sí? ♥️</p>
+        <img src="https://c.tenor.com/ho7dzMqGEDYAAAAC/tenor.gif" class="gif-bio">
+      </div>
+      <div class="bio-bloque">
+        <img src="https://c.tenor.com/otkDWfPTroQAAAAC/tenor.gif" class="gif-bio">
+        <p class="texto-bio">Tal vez, algún día, podríamos ser tú y yo… JSJSJAJSJ
+Sé que te gusta lo intenso, pero yo quiero ir a mi ritmo. Me cuesta expresar todo lo que siento, pero lo que sí puedo asegurarte es que quiero estar a tu lado. Para siempre. <3</p>
+      </div>
+      <div class="bio-bloque">
+        <p class="texto-bio">A veces, cuando eres muy directa, dices verdades que duelen un poquito.
+No porque sean malas, sino porque tienes razón. Y aunque no todos podrían soportarlo, yo prefiero mil veces alguien que me diga la verdad como tú.
+(Hello Kitty triste porque te sueles enojar conmigo 😭)</p>
+        <img src="https://media.tenor.com/g1SIlwFzDngAAAAi/crying-hello-kitty-sad-hello-kitty.gif" class="gif-bio">
+      </div>
+      <div class="bio-bloque">
+        <img src="https://c.tenor.com/meYmlwxdawgAAAAC/tenor.gif" class="gif-bio">
+        <p class="texto-bio">Al final, todo se trata de aceptarnos tal y como somos.
+Y yo te acepto a ti, con cada locura, con cada risa, con cada regaño y cada gesto bonito. Sigue siendo así, porque te quiero tal cual eres. Incluso cuando me caes mal por dos minutos. JSJSJS pipipi.</p>
+      </div>
+    </div>
+    <button class="boton boton-bio" onclick="cambiarHoja(4)">Fue bonito mostrarte esto<br>Pero nos acercamos al final</button>
+  </div>
+
+  <!-- Hoja 4 - Nota Final -->
+  <div class="carta nota-final" id="hoja4" style="display: none;">
+    <div class="contenido-nota">
+      <p class="texto-nota">"Habra días buenos y otros no tanto, pero lo que más deseo es que estemos juntos en ambos. Somos jóvenes, nos queda mucho por vivir, pero quiero que este camino lo recorramos juntos . No necesitamos que el mundo sepa todo sobre nosotros, solo que sepan que estamos juntos.
+Hoy es un día hermoso.
+(Aunque no sé por qué dije "día" si estoy escribiendo esto un sábado a las 2am JSJSJSWJKSJ.)
+Solo quiero que recuerdes algo: me perteneces, y yo te pertenezco a ti.
+No sé qué nos prepare  el futuro, pero si hay algo que quiero, es que sigas siendo mi niña, con esa esencia única que me atrapó. Y si me dejas, algún día, también quiero que seas mi esposa.
+Porque encontrarte no fue fácil.
+Y perderte… no es una opción.."</p>
+      <img src="https://c.tenor.com/agMnbu46R6EAAAAC/tenor.gif" class="gif-nota">
+    </div>
+    <button class="boton boton-nota" onclick="mostrarCuadroFinal()">Llegamos al final</button>
+  </div>
+
+  <!-- Cuadro Final -->
+  <div class="cuadro-final" id="cuadro-final" style="display: none;">
+    <div class="mensaje-final">
+      <p>Gracias por leerlo mi Tilina tomo su tiempo pero espero te haya gustado 🎀<br>Tonta</p>
+    </div>
+    <div class="gif-final">
+      <img src="https://media.tenor.com/LDZ_uvwtxFoAAAAi/sleepy-hello.gif" alt="Hello Kitty Sleepy">
+    </div>
+    <button class="boton boton-inicio" onclick="cambiarHoja(1)">Volver al inicio</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
